@@ -8,9 +8,31 @@ public class MaximumComputation
 		System.out.println("***Welcome to Max Number Computation problem***");
 		Integer firstNumber=3, secondNumber=1, thirdNumber=5;
 		Double number1=1.29, number2=7.83, number3= 2.77;
+		String value1="apple" ,value2="peach", value3="banana";
 		findMaximum(firstNumber,secondNumber,thirdNumber);
 		findMaximum(number1,number2,number3);
+		findMaximum(value1,value2,value3);
 
+	}
+
+	private static void findMaximum(String value1, String value2, String value3) 
+	{
+		String maxString;
+		
+		if(value1.compareTo(value2)>0 && value1.compareTo(value3)>0) 
+		{
+			maxString=value1;
+		}
+		else if(value2.compareTo(value1)>0 && value2.compareTo(value3)>0) 
+		{
+			maxString=value2;
+		}
+		else
+			maxString=value3;
+		
+		
+		System.out.println("The Maximum of Three String Values is "+maxString);
+		
 	}
 
 	private static void findMaximum(Double number1, Double number2, Double number3) 
